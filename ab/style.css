@@ -1,0 +1,30 @@
+/* Custom CSS */
+
+/* Style the logo */
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+/* Hide the images by default */
+#main-hall-img, #club-img {
+  display: none;
+}
+
+/* Style the info boxes */
+.info-box {
+  margin: 20px;
+}
+
+/* Hide the info boxes by default */
+#info-box-nl, #info-box-fr {
+  display: none;
+}
+
+/* Style the footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
