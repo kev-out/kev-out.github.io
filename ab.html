@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB Concerts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="https://decibel.abconcerts.be/images/AB-Corporate_Logo-Outline-AB_black.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        AB Concerts
+      </a>
+    </nav>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <button id="btn-mainhall" class="btn btn-primary btn-block">AB Main Hall</button>
+        </div>
+        <div class="col-md-6 mb-3">
+          <button id="btn-club" class="btn btn-primary btn-block">AB Club</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img id="img-mainhall" class="img-fluid" src="https://decibel.abconcerts.be/images/10Eazy-Mainhall.png" alt="AB Main Hall">
+          <img id="img-club" class="img-fluid" src="https://decibel.abconcerts.be/images/10Eazy-Club.png" alt="AB Club" style="display:none;">
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+      // Refresh images every minute
+      setInterval(function() {
+        $('#img-mainhall').attr('src', 'https://decibel.abconcerts.be/images/10Eazy-Mainhall.png?' + new Date().getTime());
+        $('#img-club').attr('src', 'https://decibel.abconcerts.be/images/10Eazy-Club.png?' + new Date().getTime());
+      }, 60000);
+
+      // Button click handlers
+      $('#btn-mainhall').on('click', function() {
+        $('#img-mainhall').show();
+        $('#img-club').hide();
+      });
+
+      $('#btn-club').on('click', function() {
+        $('#img-mainhall').hide();
+        $('#img-club').show();
+      });
+    </script>
+  </body>
+</html>
