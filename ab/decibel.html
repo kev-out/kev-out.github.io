@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AB Concerts Decibel Monitoring</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link to bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to custom CSS -->
+  <link rel="stylesheet" href="https://kev-out.github.io/ab/style.css">
+  <!-- Link to jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- Link to bootstrap CDN -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Link to custom JS -->
+  <script src="https://kev-out.github.io/ab/script.js"></script>
+</head>
+<body>
+  <!-- Header with logo -->
+  <div class="header">
+    <img src="https://decibel.abconcerts.be/images/AB-Corporate_Logo-Outline-AB_black.png" alt="AB Logo" class="logo">
+  </div>
+  <!-- Navigation bar with buttons -->
+  <div class="navbar">
+    <button id="main-hall-btn" class="btn btn-primary">AB Main Hall</button>
+    <button id="club-btn" class="btn btn-primary">AB Club</button>
+    <!-- Language selector -->
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Language
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" data-lang="en">English</a>
+        <a class="dropdown-item" href="#" data-lang="nl">Nederlands</a>
+        <a class="dropdown-item" href="#" data-lang="fr">Français</a>
+      </div>
+    </div>
+  </div>
+  <!-- Main content with image and info box -->
+  <div class="container">
+    <!-- Image container -->
+    <div class="image-container">
+      <!-- Image for main hall -->
+      <img id="main-hall-img" src="https://decibel.abconcerts.be/images/10Eazy-Mainhall.png" alt="Main Hall Decibel Level" class="img-fluid">
+      <!-- Image for club -->
+      <img id="club-img" src="https://decibel.abconcerts.be/images/10Eazy-Club.png" alt="Club Decibel Level" class="img-fluid">
+    </div>
+    <!-- Info box container -->
+    <div class="info-box-container">
+      <!-- Info box for English -->
+      <div id="info-box-en" class="info-box alert alert-info">
+        <h4>What are decibels?</h4>
+        <p>Decibels (dB) are a unit of measurement that indicates how loud a sound is. Humans can hear sounds between 0 dB (almost total silence) and 120 dB (a loud rock concert).</p>
+        <h4>What are the regulations?</h4>
+        <p>In Flanders, there are regulations that limit the sound levels at events to protect the hearing of the public and the performers. The maximum sound level allowed is 100 dB(A) over a period of 60 minutes.</p>
+      </div>
+      <!-- Info box for Dutch -->
+      <div id="info-box-nl" class="info-box alert alert-info">
+        <h4>Wat zijn decibels?</h4>
+        <p>Decibels (dB) zijn een eenheid van meting die aangeeft hoe luid een geluid is. Mensen kunnen geluiden horen tussen 0 dB (bijna volledige stilte) en 120 dB (een luid rockconcert).</p>In Vlaanderen zijn er regels die de geluidsniveaus bij evenementen beperken om het gehoor van het publiek en de artiesten te beschermen. Het maximale geluidsniveau dat is toegestaan, is 100 dB(A) over een periode van 60 minuten.</p>
+      </div>
+      <!-- Info box for French -->
+      <div id="info-box-fr" class="info-box alert alert-info">
+        <h4>Qu'est-ce que les décibels ?</h4>
+        <p>Les décibels (dB) sont une unité de mesure qui indique le niveau sonore d'un bruit. Les humains peuvent entendre des sons entre 0 dB (presque le silence total) et 120 dB (un concert de rock bruyant).</p>
+        <h4>Quelles sont les réglementations ?</h4>
+        <p>En Flandre, il existe des règles qui limitent les niveaux sonores lors des événements pour protéger l'audition du public et des artistes. Le niveau sonore maximal autorisé est de 100 dB(A) sur une période de 60 minutes.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2023 by AB Concerts. All rights reserved.</p>
+  </div>
+</body>
+</html>
