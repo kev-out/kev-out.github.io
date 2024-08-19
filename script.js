@@ -1,5 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2V2ZGVhIiwiYSI6ImNtMDFmbjZ1aDA2bW0ya3BvZDZ5Zm5hYXcifQ.tYX-NzJnwBaLEJ9lSBjKTQ';
 mapboxgl.baseApiUrl  = 'https://cloudfront-staging.tilestream.net';
+MapboxDirections.api  = 'https://cloudfront-staging.tilestream.net';
 
 navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
   enableHighAccuracy: true
@@ -16,15 +17,16 @@ function errorLocation() {
 function setupMap(center) {
   const map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/mapbox/streets-v11",
+    style: "mapbox://styles/mapbox/satellite-streets-v12",
     center: center,
-    zoom: 15
+    zoom: 15,
   })
 
   const nav = new mapboxgl.NavigationControl()
   map.addControl(nav)
 
   var directions = new MapboxDirections({
+    unit: 'metric',
     accessToken: mapboxgl.accessToken
   })
 
