@@ -1,5 +1,5 @@
-mapboxgl.accessToken =
-  "pk.eyJ1Ijoia2V2ZGVhIiwiYSI6ImNtMDFmbjZ1aDA2bW0ya3BvZDZ5Zm5hYXcifQ.tYX-NzJnwBaLEJ9lSBjKTQ"
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2V2ZGVhIiwiYSI6ImNtMDFmbjZ1aDA2bW0ya3BvZDZ5Zm5hYXcifQ.tYX-NzJnwBaLEJ9lSBjKTQ';
+mapboxgl.baseApiUrl  = 'https://cloudfront-staging.tilestream.net';
 
 navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
   enableHighAccuracy: true
