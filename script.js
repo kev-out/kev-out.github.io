@@ -1,6 +1,5 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoia2V2ZGVhIiwiYSI6ImNtMDFmbjZ1aDA2bW0ya3BvZDZ5Zm5hYXcifQ.tYX-NzJnwBaLEJ9lSBjKTQ';
-mapboxgl.baseApiUrl  = 'https://cloudfront-staging.tilestream.net';
-MapboxDirections.api  = 'https://cloudfront-staging.tilestream.net';
+mapboxgl.accessToken =
+  "pk.eyJ1Ijoia2V2ZGVhIiwiYSI6ImNtMDFmbjZ1aDA2bW0ya3BvZDZ5Zm5hYXcifQ.tYX-NzJnwBaLEJ9lSBjKTQ"
 
 navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
   enableHighAccuracy: true
@@ -17,18 +16,33 @@ function errorLocation() {
 function setupMap(center) {
   const map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/kevdea/cm01kki6o003m01oi1v4zakgn",
+    style: "mapbox://styles/mapbox/streets-v11",
     center: center,
-    zoom: 15,
+    zoom: 15
   })
-
+  
   const nav = new mapboxgl.NavigationControl()
   map.addControl(nav)
 
   var directions = new MapboxDirections({
-    unit: 'metric',
     accessToken: mapboxgl.accessToken
   })
 
-  map.addControl(directions, "top-left")
+  map.addControl(directions, "bottom-right")
+  
+
+    const layerList = document.getElementById('menu');
+    const inputs = layerList.getElementsByTagName('input');
+
+    for (const input of inputs) {
+        input.onclick = (layer) => {
+            const layerId = layer.target.id;
+            map.setStyle('mapbox://styles/mapbox/' + layerId);
+        };
+    }
+    
 }
+
+
+
+    
